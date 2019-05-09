@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".activity.FirstActivity">
+
+    <cn.bingoogolapple.bgabanner.BGABanner
+        android:id="@+id/banner_content"
+        style="@style/BannerDefaultStyle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        app:banner_indicatorGravity="bottom|center_horizontal"
+        app:banner_isNeedShowIndicatorOnOnlyOnePage="true"
+        app:banner_isNumberIndicator="false"
+        app:banner_pointAutoPlayAble="true"
+        app:banner_pointContainerBackground="@android:color/transparent"
+        app:banner_pointDrawable="@drawable/bga_banner_selector_point_hollow"
+        app:banner_transitionEffect="defaultEffect" />
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_marginLeft="40px"
+                android:layout_marginTop="98px"
+                android:src="@mipmap/icon_logo"
+                android:layout_width="28px"
+                android:layout_height="28px" />
+            <TextView
+                android:layout_toRightOf="@+id/iv_logo"
+                android:layout_marginLeft="10px"
+                android:text="换电柜规则"
+                android:textColor="#333"
+                android:textSize="26px"
+                android:layout_marginTop="95px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginLeft="40px"
+                android:layout_marginTop="40px"
+                android:layout_below="@+id/iv_logo"
+                android:textColor="#333"
+                android:lineSpacingExtra="5px"
+                android:text="1、使用微信扫描屏幕右下角二维码\n2、在手机上进行支付\n3、开门后放入电池并管好箱门\n4、系统自动开满电状态电池箱门，取走电池\n5、取走电池后请关好箱门"
+                android:textSize="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_marginTop="68px"
+                android:text="扫 码 换 电 池"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:textSize="30px"
+                android:textColor="#333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+<ImageView
+    android:id="@+id/iv_code"
+    android:background="#333"
+    android:layout_marginTop="30px"
+    android:layout_below="@+id/tv_title"
+    android:layout_centerHorizontal="true"
+    android:layout_width="236px"
+    android:layout_height="236px" />
+
+            <TextView
+                android:id="@+id/tv_pay_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_code"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16px"
+                android:text="打开微信扫一扫"
+                android:textColor="#333"
+                android:textSize="22px" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

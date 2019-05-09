@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.chuangyingkeji.serialportdetection"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.2.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            moduleName "serial_port"         //生成的so名字
+            abiFilters "armeabi", "armeabi-v7a", "x86"  //输出指定三种abi体系结构下的so库。
+        }
+    }
+    sourceSets.main {
+        jni.srcDirs = []
+    }
+    buildTypes {
+        release {
+            //在这里添加：
+            lintOptions {
+                checkReleaseBuilds false
+                abortOnError false
+            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.2.0
+    compile 'com.android.support:appcompat-v7:26.1.0'
+//网络请求
+    compile 'com.lzy.net:okgo:3.0.4'
+    compile 'com.google.code.gson:gson:2.2.4'
+    //socket通信
+    compile 'com.github.vilyever:AndroidSocketClient:2.0.1'
+    //二维码生成
+    compile 'com.journeyapps:zxing-android-embedded:3.5.0'
+    compile 'com.google.zxing:core:3.3.0'
+    //轮播图
+    compile 'cn.bingoogolapple:bga-banner:2.2.5@aar'
+    compile 'cn.bingoogolapple:bga-baseadapter:1.2.9@aar'
+    //图片展示
+    compile 'com.github.bumptech.glide:glide:4.7.1'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+
+    //rxjava2.x
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+}

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.chuangyingkeji.serialportdetection.activity.OrderActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:background="#ff494f"
+        android:gravity="center"
+        android:text="打开柜门"
+        android:textColor="#fff"
+        android:textSize="50px" />
+
+   <LinearLayout
+       android:background="@color/white"
+       android:orientation="vertical"
+       android:layout_weight="1"
+       android:layout_width="match_parent"
+       android:layout_height="0dp">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="60px"
+           android:layout_marginLeft="74px"
+           android:layout_marginRight="74px"
+           android:layout_marginTop="180px">
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="8px"
+               android:layout_centerVertical="true"
+               android:background="#ff494f" />
+
+           <TextView
+               android:id="@+id/tv_1"
+               android:layout_width="60px"
+
+               android:layout_height="60px"
+               android:layout_centerVertical="true"
+               android:background="@drawable/shape_solid_red_circle"
+               android:gravity="center"
+               android:text="1"
+               android:textColor="@color/white"
+               android:textSize="36px" />
+
+           <TextView
+               android:id="@+id/tv_3"
+               android:layout_width="60px"
+               android:layout_height="60px"
+               android:layout_centerHorizontal="true"
+               android:layout_centerVertical="true"
+               android:background="@drawable/shape_nosolid_red_circle"
+               android:gravity="center"
+               android:text="3"
+               android:textColor="@color/red"
+               android:textSize="36px" />
+
+           <TextView
+               android:id="@+id/tv_5"
+               android:layout_width="60px"
+               android:layout_height="60px"
+               android:layout_alignParentRight="true"
+               android:layout_centerVertical="true"
+               android:background="@drawable/shape_nosolid_red_circle"
+               android:gravity="center"
+               android:text="5"
+               android:textColor="@color/red"
+               android:textSize="36px" />
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <RelativeLayout
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent">
+                   <TextView
+                       android:id="@+id/tv_2"
+                       android:layout_width="60px"
+                       android:layout_height="60px"
+                       android:layout_centerHorizontal="true"
+                       android:layout_centerVertical="true"
+                       android:background="@drawable/shape_solid_red_circle"
+                       android:gravity="center"
+                       android:text="2"
+                       android:textColor="@color/white"
+                       android:textSize="36px" />
+               </RelativeLayout>
+               <RelativeLayout
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent">
+                   <TextView
+                       android:id="@+id/tv_4"
+                       android:layout_width="60px"
+                       android:layout_height="60px"
+                       android:layout_centerHorizontal="true"
+                       android:layout_centerVertical="true"
+                       android:background="@drawable/shape_nosolid_red_circle"
+                       android:gravity="center"
+                       android:text="4"
+                       android:textColor="@color/red"
+                       android:textSize="36px" />
+               </RelativeLayout>
+           </LinearLayout>
+
+       </RelativeLayout>
+
+       <ImageView
+           android:layout_gravity="center_horizontal"
+           android:id="@+id/iv_state"
+           android:layout_marginTop="164px"
+           android:layout_width="340px"
+           android:layout_height="290px" />
+       <TextView
+           android:textColor="@color/Black"
+           android:textSize="32px"
+           android:gravity="center"
+           android:text="没电的电池已经放入柜中，\n正在检测电池，请稍等"
+           android:layout_gravity="center_horizontal"
+           android:id="@+id/tv_state_hint"
+           android:layout_marginTop="38px"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+
+   </LinearLayout>
+    <LinearLayout
+android:background="#f8f8f8"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="480px">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_marginLeft="40px"
+                android:layout_marginTop="98px"
+                android:src="@mipmap/icon_logo"
+                android:layout_width="28px"
+                android:layout_height="28px" />
+            <TextView
+                android:layout_toRightOf="@+id/iv_logo"
+                android:layout_marginLeft="10px"
+                android:text="换电柜规则"
+                android:textColor="#333"
+                android:textSize="26px"
+                android:layout_marginTop="95px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginLeft="40px"
+                android:layout_marginTop="40px"
+                android:layout_below="@+id/iv_logo"
+                android:textColor="#333"
+                android:lineSpacingExtra="5px"
+                android:text="1、使用微信扫描屏幕右下角二维码\n2、在手机上进行支付\n3、开门后放入电池并管好箱门\n4、系统自动开满电状态电池箱门，取走电池\n5、取走电池后请关好箱门"
+                android:textSize="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_marginTop="68px"
+                android:text="扫 码 换 电 池"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:textSize="30px"
+                android:textColor="#333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv_action_hint"
+                android:background="#333"
+                android:layout_marginTop="30px"
+                android:layout_below="@+id/tv_hint"
+                android:layout_centerHorizontal="true"
+                android:layout_width="236px"
+                android:layout_height="236px" />
+
+            <TextView
+                android:id="@+id/tv_action_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_action_hint"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16px"
+                android:text="打开微信扫一扫"
+                android:textColor="#333"
+                android:textSize="22px" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
